@@ -1,0 +1,1 @@
+INSERT INTO movie (id, title, year) VALUES (1, 'Gladiator', 2000), (2,'Star Wars', 1977), (3, 'Pitch Black', 2000); 
