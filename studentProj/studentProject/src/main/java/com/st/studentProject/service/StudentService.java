@@ -21,4 +21,27 @@ public class StudentService {
 	{
 		return studentRepository.findAll();
 	}
+	public void deleteAll()
+	{
+		studentRepository.deleteAll();
+	}
+	public void deleteStudentById(Long id)
+	{
+		studentRepository.deleteById(id);
+	}
+	public void saveStudent(Student student)
+	{
+		studentRepository.save(student);
+	}
+	public void updateStudent(Long id, Student updateStudent)
+	{
+		Student studentReplace = studentRepository.findStudentById(id);
+		String firstName= updateStudent.getFirstName();
+		String lastName= updateStudent.getLastName();
+		String adjName= updateStudent.getAdjName();
+		if(firstName != null) studentReplace.setFirstName(firstName);
+		if(lastName != null) studentReplace.setLastName(lastName);
+		if(adjName != null) studentReplace.setAdjName(adjName);
+		
+	}
 }

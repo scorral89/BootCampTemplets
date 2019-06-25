@@ -11,4 +11,4 @@ import com.st.studentProject.model.Student;
 public interface StudentRepository extends CrudRepository<Student,Long> {
 	public List<Student> findAll();
 	public Student findStudentById(Long id);
-	}
+}
