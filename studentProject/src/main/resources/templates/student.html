@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<h1>All Students</h1>
+
+	<div th:text="${student.firstName}"></div>
+	<div th:text="${student.lastName}"></div>
+	<div th:text="${student.adjName}"></div>
+	<form action="#" th:action="@{/student/}+${student.id}" th:method="delete">
+	<input type="hidden" name="_method" value="delete"/>
+	<button type="submit">Delete</button>
+	</form>
+</body>
+</html>
