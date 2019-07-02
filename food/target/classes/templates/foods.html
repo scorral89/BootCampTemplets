@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+	<head>
+	</head>
+	<body>
+		<div th:each = "food: ${food}">
+			<a th:href = "@{/food/} + ${food.id}">
+				<div th:text = "${food.name}"></div>
+				<div th:text = "${food.color}"></div>
+			</a>
+		</div>
+	</body>
+</html>
